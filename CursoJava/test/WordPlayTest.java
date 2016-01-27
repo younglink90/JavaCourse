@@ -20,4 +20,13 @@ public class WordPlayTest {
 		assertTrue("Hplp".equals(firstTest));
 		assertTrue("Hplp, cpmp pndpmpps, cpmppñprp".equals(secondTest));
 	}
+	
+	@Test
+	public void testEmphasize() {
+		WordPlay wp = new WordPlay();
+		String expectedResult = "dn* ctg+*+ctg+";
+		
+		String result = wp.emphasize("dna ctgaaactga", 'a');
+		assertTrue(expectedResult.equals(result));
+	}
 }
