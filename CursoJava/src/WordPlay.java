@@ -30,8 +30,12 @@ public class WordPlay {
 
 		for (int i = 0; i < phrase.length(); i++) {
 			if (phrase.charAt(i) == ch) {
-				if (i % 2 == 0) newString += '*';
-				else newString += '+';
+				if (i % 2 == 0) { 
+					newString += '*'; 
+				}
+				else {
+					newString += '+';
+				}
 				
 				continue;
 			}
