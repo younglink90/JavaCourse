@@ -1,14 +1,7 @@
 public class WordPlay {
 
-	private char[] vowelArray = { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
-
 	public boolean isVowel(Character ch) {
-		for (char vowel : vowelArray) {
-			if (vowel == ch) {
-				return true;
-			}
-		}
-		return false;
+		return "aeiouAEIOU".contains(ch.toString());
 	}
 
 	public String replaceVowels(String phrase, Character ch) {
