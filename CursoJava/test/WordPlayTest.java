@@ -8,6 +8,7 @@ public class WordPlayTest {
 	@Test
 	public void testIsVowelMethod() {
 		WordPlay wp = new WordPlay();
+		
 		assertFalse(wp.isVowel('f'));
 		assertTrue(wp.isVowel('a'));
 	}
@@ -15,15 +16,21 @@ public class WordPlayTest {
 	@Test
 	public void testReplaceVowel() {
 		WordPlay wp = new WordPlay();
+		
+		String firstExpectedResult = "Hplp";
+		String secondExpectedResult = "Hplp, cpmp pndpmpps, cpmppñprp";
+		
 		String firstTest = wp.replaceVowels("Hola", 'p');
 		String secondTest = wp.replaceVowels("Hola, como andamios, compañero", 'p');
-		assertTrue("Hplp".equals(firstTest));
-		assertTrue("Hplp, cpmp pndpmpps, cpmppñprp".equals(secondTest));
+		
+		assertTrue(firstExpectedResult.equals(firstTest));
+		assertTrue(secondExpectedResult.equals(secondTest));
 	}
 	
 	@Test
 	public void testEmphasize() {
 		WordPlay wp = new WordPlay();
+		
 		String expectedResult = "dn* ctg+*+ctg+";
 		
 		String result = wp.emphasize("dna ctgaaactga", 'a');
