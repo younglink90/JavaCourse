@@ -6,7 +6,7 @@ public class CaesarCipher {
 	private static final int FIRST_LOWERCASE_LETTER_POSITION = 97;
 	private static final int LAST_LOWERCASE_LETTER_POSITION = 122;
 	
-	public String encrypt2(String phrase, int key) {
+	public String encrypt(String phrase, int key) {
 		String cipheredMessage = "";
 		
 		int keyParsed = key % 26;
