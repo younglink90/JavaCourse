@@ -18,4 +18,15 @@ public class CaesarCipherTest {
 		assertTrue(firstResult.equals(firstStringCiphered));
 		assertTrue(secondResult.equals(secondStringCiphered));
 	}
+	
+	@Test
+	public void testEncryptTwoKeys() {
+		CaesarCipher cc = new CaesarCipher();
+		String StringToCipher = "First Legion";
+		String ExpectedStringCiphered = "Czojq Ivdzle";
+		
+		String Result = cc.encryptTwoKeys(StringToCipher, 23, 17);
+				 		
+		assertTrue(Result.equals(ExpectedStringCiphered));
+	}
 }
